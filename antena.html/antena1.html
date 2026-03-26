@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>محاكاة واجهة إعدادات الهوائي</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f0f2f5; padding: 20px; }
+        .container { max-width: 500px; background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: auto; }
+        h2 { color: #1a73e8; text-align: center; }
+        .status-item { margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #eee; }
+        .label { font-weight: bold; display: block; margin-bottom: 5px; }
+        .signal-bar { height: 20px; background: #ddd; border-radius: 10px; overflow: hidden; }
+        .signal-fill { height: 100%; background: linear-gradient(to left, #4caf50, #8bc34a); width: 85%; } /* محاكاة قوة الإشارة */
+        .value { color: #555; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>لوحة تحكم الهوائي (Station)</h2>
+    
+    <div class="status-item">
+        <span class="label">اسم البرج (SSID):</span>
+        <span class="value">Barq-Net-Tower-01</span>
+    </div>
+
+    <div class="status-item">
+        <span class="label">قوة الإشارة (Signal Strength):</span>
+        <div class="signal-bar">
+            <div class="signal-fill"></div>
+        </div>
+        <span class="value">-55 dBm (ممتازة)</span>
+    </div>
+
+    <div class="status-item">
+        <span class="label">عنوان الأي بي (Local IP):</span>
+        <span class="value">192.168.1.20</span>
+    </div>
+
+    <div class="status-item">
+        <span class="label">حالة الاتصال:</span>
+        <span class="value" style="color: green; font-weight: bold;">متصل (Connected)</span>
+    </div>
+</div>
+
+</body>
+</html>

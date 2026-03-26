@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الطيران المدني بنغازي - نظام المراقبة</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
+        .header { background: #fff; border-right: 10px solid #004a99; padding: 25px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: right;}
+        .header h1 { margin: 0; font-size: 26px; color: #004a99; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        .author { margin-top: 15px; font-size: 19px; color: #555; }
+        /* تصحيح اللون للازرق الملكي الجريء والقوي */
+        .engineer-name { color: #004a99; font-weight: bold; font-size: 24px; text-decoration: underline; }
+        
+        .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; text-align: right;}
+        .card { background: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .card h3 { color: #004a99; margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .status { font-size: 14px; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-weight: bold;}
+        .online { background: #e6fffa; color: #00876c; border: 1px solid #b2f5ea; }
+        .data-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-family: 'Courier New', monospace; font-size: 15px;}
+        .data-label { color: #777; }
+        .data-value { color: #333; font-weight: bold; }
+        
+        .btn-action { width: 100%; padding: 14px; background: #004a99; border: none; color: white; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 20px; font-family: 'Segoe UI', sans-serif; font-size: 16px; transition: background 0.3s; }
+        .btn-action:hover { background: #003366; }
+        
+        .pulse { width: 10px; height: 10px; background: #00876c; border-radius: 50%; display: inline-block; margin-left: 10px; animation: blink 1.5s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>إدارة الطيران المدني بنغازي - قسم الشؤون الفنية</h1>
+        <div class="author">إعداد المهندس : <span class="engineer-name">صالحين سليمان اكريم اكريم الزوي</span></div>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <div class="status online">نظام السيادة الجوية والاتصالات <span class="pulse"></span></div>
+            <h3>رادار مراقبة الترددات (VHF)</h3>
+            <div class="data-row"><span class="data-label">التردد التشغيلي:</span> <span class="data-value">121.5 MHz</span></div>
+            <div class="data-row"><span class="data-label">قوة الإشارة المسجلة:</span> <span class="data-value" style="color: #00876c;">-92 dBm (ممتاز)</span></div>
+            <div class="data-row"><span class="data-label">معدل الخطأ (BER):</span> <span class="data-value">0.001%</span></div>
+            <button class="btn-action" onclick="alert('جاري بدء بروتوكول مسح الترددات.. تنفيذ المهندس صالحين الزوي.')">بدء المسح الفني الشامل</button>
+        </div>
+
+        <div class="card">
+            <div class="status online">نظام البنية التحتية والشبكات <span class="pulse"></span></div>
+            <h3>بوابة الربط الرقمي (Gateway)</h3>
+            <div class="data-row"><span class="data-label">عنوان الـ IP الحالي:</span> <span class="data-value">172.16.10.1</span></div>
+            <div class="data-row"><span class="data-label">سعة النقل المستهلكة:</span> <span class="data-value">185 Mbps / 300 Mbps</span></div>
+            <div class="data-row"><span class="data-label">وقت التشغيل المتواصل:</span> <span class="data-value">245 ساعة</span></div>
+            <button class="btn-action" style="background: #a94442;" onclick="confirm('تحذير: إعادة تشغيل النظام قد تؤثر على الاتصال. هل تريد الاستمرار؟ إذن المهندس صالحين.')">إعادة تشغيل البوابة</button>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; color: #888; font-size: 13px; font-family: 'Segoe UI', sans-serif; border-top: 1px solid #eee; padding-top: 20px;">
+        منظومة مراقبة الأداء الفني - تطوير المهندس صالحين الزوي © 2026
+    </div>
+
+</body>
+</html>
