@@ -6,9 +6,14 @@
     <title>المكتبة الإفتراضية - الطيران المدني بنغازي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* إضافة ميزة لتحسين توزيع العناصر على الهواتف */
+        * {
+            box-sizing: border-box;
+        }
+
         :root {
-            --main-blue: #003366; /* الأزرق الرسمي للطيران */
-            --gold-accent: #c5a059; /* الذهبي الملكي */
+            --main-blue: #003366; 
+            --gold-accent: #c5a059; 
             --bg-color: #f4f7f9;
             --white: #ffffff;
         }
@@ -22,7 +27,6 @@
             line-height: 1.6;
         }
 
-        /* رأس الصفحة */
         header {
             background: linear-gradient(135deg, var(--main-blue), #004a99);
             color: white;
@@ -41,7 +45,6 @@
             padding: 0 15px;
         }
 
-        /* قسم الإهداء والمقدمة */
         .intro-card {
             background: var(--white);
             padding: 30px;
@@ -52,13 +55,6 @@
             margin-bottom: 40px;
         }
 
-        .intro-card p {
-            font-size: 1.1rem;
-            color: #444;
-            margin: 0;
-        }
-
-        /* تنسيق أقسام المكتبة */
         .section-header {
             margin: 40px 0 20px;
             color: var(--main-blue);
@@ -107,7 +103,6 @@
 
         .btn-download:hover { background: var(--gold-accent); }
 
-        /* قسم أرجو أن تحمل كتابك هنا */
         .upload-box {
             background: #eef4f9;
             margin-top: 60px;
@@ -149,7 +144,6 @@
 
         .btn-submit:hover { background: var(--gold-accent); }
 
-        /* الهامش (Footer) */
         footer {
             background: #1a1a1a;
             color: #bdc3c7;
@@ -173,10 +167,9 @@
 <div class="container">
     <div class="intro-card">
         <p>
-            كم يسرني زملائي المهندسين في ليبيا وأينما كنتم أن أهديكم هذا العمل الذي أخذ مني مجهوداً كبيرا جدا من البحث والتحليل العلمي والتدقيق لتكون هذه المكتبة مرجعاً مفيداً لكم وللأجيال القادمة.
-                        اخوكم في الله .....       
-                م/ صالحين اكريم
-
+            كم يسرني زملائي المهندسين في ليبيا وأينما كنتم أن أهديكم هذا العمل الذي أخذ مني مجهوداً كبيراً جداً من البحث والتحليل العلمي والتدقيق لتكون هذه المكتبة مرجعاً مفيداً لكم وللأجيال القادمة.
+            <br>
+            أخوكم في الله: <strong>م/ صالحين اكريم</strong>
         </p>
     </div>
 
@@ -184,11 +177,11 @@
     <div class="books-grid">
         <div class="book-card">
             <span class="book-title">دليل أنظمة الرادار الجوي</span>
-            <a href="library/P1-dB conversions 2nd.pdf" class="btn-download">تحميل الكتاب</a>
+            <a href="library/P1-dB-conversions-2nd.pdf" class="btn-download" download>تحميل الكتاب</a>
         </div>
         <div class="book-card">
             <span class="book-title">تقنيات اللاسلكي HF/VHF</span>
-            <a href="library/P3-Configuration of Park Air T6 Radios.pdf" class="btn-download">تحميل الكتاب</a>
+            <a href="library/P3-Configuration-of-Park-Air-T6-Radios.pdf" class="btn-download" download>تحميل الكتاب</a>
         </div>
     </div>
 
@@ -196,7 +189,7 @@
     <div class="books-grid">
         <div class="book-card">
             <span class="book-title">أنظمة الملاحة الجوية الحديثة</span>
-            <a href="library/P4-Configuration of Park Air C4 Cabinets.pdf" class="btn-download">تحميل الكتاب</a>
+            <a href="library/P4-Configuration-of-Park-Air-C4-Cabinets.pdf" class="btn-download" download>تحميل الكتاب</a>
         </div>
     </div>
 
@@ -204,16 +197,16 @@
         <h3>أرجو أن تحمل كتابك هنا</h3>
         <p>مساهمتكم العلمية تخدم الجميع.. سيتم المراجعة قبل الاعتماد في المكتبة.</p>
 
-        <form action="https://formspree.io/f/mreopwlw" method="POST" enctype="multipart/form-data" class="upload-form">
-            <input type="text" name="name" placeholder="اسم المهندس / مقدم الكتاب" required>
-            <input type="text" name="book_name" placeholder="عنوان المرجع العلمي" required>
-            <select name="category">
-                <option>اختر التخصص</option>
-                <option>اتصالات ورادار</option>
-                <option>ملاحة جوية</option>
-                <option>صيانة وكهرباء</option>
+        <form action="https://forminit.com/f/fb71r4l1s28" method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="text" name="engineer_name" placeholder="اسم المهندس / مقدم الكتاب" required>
+            <input type="text" name="book_title" placeholder="عنوان المرجع العلمي" required>
+            <select name="specialty" required>
+                <option value="">اختر التخصص</option>
+                <option value="telecom">اتصالات ورادار</option>
+                <option value="navigation">ملاحة جوية</option>
+                <option value="maintenance">صيانة وكهرباء</option>
             </select>
-            <input type="file" name="attachment" accept=".pdf">
+            <input type="file" name="file_upload" accept=".pdf" required>
             <button type="submit" class="btn-submit">إرسال الكتاب للمراجعة</button>
         </form>
     </div>
