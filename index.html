@@ -90,14 +90,26 @@
         </div>
     </div>
 
+    <h3 class="section-header">✈️ الملاحة الجوية (Navigation)</h3>
+    <div class="books-grid">
+        <div class="book-card">
+            <span class="book-title">أساسيات الملاحة الجوية</span>
+            <a href="library/nav-basics.pdf" class="btn-download" download>تحميل</a>
+        </div>
+        <div class="book-card">
+            <span class="book-title">أنظمة الهبوط الآلي ILS</span>
+            <a href="library/ils-systems.pdf" class="btn-download" download>تحميل</a>
+        </div>
+    </div>
+
     <div class="upload-box" id="upload">
         <h3>📤 أرجو أن تحمل كتابك هنا</h3>
         <p>مساهمتكم العلمية تخدم الجميع.. سيتم المراجعة قبل الاعتماد.</p>
 
         <form action="https://forminit.com/f/fb71r4l1s28" method="POST" enctype="multipart/form-data" class="upload-form">
-            <input type="text" name="المهندس" placeholder="اسم مقدم الكتاب" required>
-            <input type="text" name="عنوان_الكتاب" placeholder="عنوان المرجع العلمي" required>
-            <select name="التخصص" required>
+            <input type="text" name="engineer_name" placeholder="اسم مقدم الكتاب" required>
+            <input type="text" name="book_title" placeholder="عنوان المرجع العلمي" required>
+            <select name="specialization" required>
                 <option value="">اختر التخصص</option>
                 <option value="اتصالات">اتصالات ورادار</option>
                 <option value="ملاحة">ملاحة جوية</option>
