@@ -50,16 +50,15 @@
         }
         .btn-download:hover { background: var(--gold-accent); }
         .upload-box {
-            background: #eef4f9; margin-top: 60px; padding: 35px;
+            background: #eef4f9; margin-top: 60px; padding: 40px 20px;
             border-radius: 15px; border: 2px dashed var(--main-blue); text-align: center;
         }
-        .upload-form { max-width: 500px; margin: 20px auto 0; display: flex; flex-direction: column; gap: 12px; }
-        .upload-form input, .upload-form select { padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Tajawal'; }
-        .btn-submit {
-            background: var(--main-blue); color: white; padding: 14px;
-            border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;
+        .btn-link {
+            background: var(--main-blue); color: white; padding: 15px 35px;
+            text-decoration: none; border-radius: 8px; font-weight: bold;
+            display: inline-block; transition: 0.3s; margin-top: 15px;
         }
-        .btn-submit:hover { background: var(--gold-accent); }
+        .btn-link:hover { background: var(--gold-accent); transform: scale(1.05); }
         footer { background: #1a1a1a; color: #bdc3c7; padding: 40px 20px; text-align: center; margin-top: 50px; }
     </style>
 </head>
@@ -103,20 +102,14 @@
     </div>
 
     <div class="upload-box" id="upload">
-        <h3>📤 أرجو أن تحمل كتابك هنا</h3>
-        <p>مساهمتكم العلمية تخدم الجميع.. سيتم المراجعة قبل الاعتماد.</p>
+        <h3>📤 هل تود إضافة كتاب أو مرجع؟</h3>
+        <p>مساهمتكم العلمية تخدم الجميع.. اضغط على الزر أدناه لإرسال الملف للمراجعة.</p>
+        
+        <a href="#" class="btn-link">إرسال ملف PDF للمراجعة</a>
 
-        <form action="https://forminit.com/f/fb71r4l1s28" method="POST" enctype="multipart/form-data" class="upload-form">
-            <input type="text" name="engineer_name" placeholder="اسم مقدم الكتاب" required>
-            <input type="text" name="book_title" placeholder="عنوان المرجع العلمي" required>
-            <select name="specialization" required>
-                <option value="">اختر التخصص</option>
-                <option value="اتصالات">اتصالات ورادار</option>
-                <option value="ملاحة">ملاحة جوية</option>
-            </select>
-            <input type="file" name="file" accept=".pdf" required>
-            <button type="submit" class="btn-submit">إرسال الكتاب للمراجعة</button>
-        </form>
+        <p style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+            * سيتم إضافة الكتاب للموقع بعد مراجعته والتأكد من جودته.
+        </p>
     </div>
 </div>
 
