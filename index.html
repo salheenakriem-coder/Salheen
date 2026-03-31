@@ -6,116 +6,125 @@
     <title>المكتبة الإفتراضية - الطيران المدني بنغازي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
         :root {
             --main-blue: #003366; 
             --gold-accent: #c5a059; 
             --bg-color: #f4f7f9;
             --white: #ffffff;
+            --text-dark: #333;
         }
+
         body {
             font-family: 'Tajawal', sans-serif;
             background-color: var(--bg-color);
-            margin: 0; padding: 0; color: #333; line-height: 1.6;
+            margin: 0; padding: 0; color: var(--text-dark); line-height: 1.6;
         }
+
         header {
             background: linear-gradient(135deg, var(--main-blue), #004a99);
-            color: white; padding: 50px 20px; text-align: center;
-            border-bottom: 6px solid var(--gold-accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            color: white; padding: 40px 20px; text-align: center;
+            border-bottom: 5px solid var(--gold-accent);
         }
-        header h1 { margin: 0; font-size: 1.8rem; font-weight: 700; }
-        header p { margin: 10px 0 0; font-size: 1.2rem; opacity: 0.9; }
-        .container { max-width: 950px; margin: -30px auto 50px; padding: 0 15px; }
+
+        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+
         .intro-card {
-            background: var(--white); padding: 30px; border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center;
-            border-right: 8px solid var(--gold-accent); margin-bottom: 40px;
+            background: var(--white); padding: 20px; border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;
+            margin-bottom: 25px; border-right: 6px solid var(--gold-accent);
         }
+
         .section-header {
-            margin: 40px 0 20px; color: var(--main-blue); font-size: 1.4rem;
-            border-bottom: 2px solid #ddd; padding-bottom: 8px;
+            margin: 30px 0 15px; color: var(--main-blue); font-size: 1.3rem;
+            border-bottom: 2px solid var(--gold-accent); padding-bottom: 5px;
             display: flex; align-items: center; gap: 10px;
         }
-        .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+
+        .books-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
         .book-card {
-            background: var(--white); padding: 18px; border-radius: 10px;
+            background: var(--white); padding: 15px; border-radius: 8px;
             display: flex; justify-content: space-between; align-items: center;
-            border: 1px solid #e1e8ed; transition: 0.3s;
+            border: 1px solid #ddd; transition: 0.3s;
         }
-        .book-card:hover { transform: translateY(-3px); border-color: var(--gold-accent); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+
+        .book-card:hover { border-color: var(--main-blue); transform: scale(1.01); }
+
         .btn-download {
-            background: var(--main-blue); color: white; padding: 7px 15px;
-            text-decoration: none; border-radius: 5px; font-size: 0.85rem; font-weight: 500;
+            background: var(--main-blue); color: white; padding: 7px 20px;
+            text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.85rem;
         }
-        .btn-download:hover { background: var(--gold-accent); }
-        .upload-box {
-            background: #eef4f9; margin-top: 60px; padding: 40px 20px;
-            border-radius: 15px; border: 2px dashed var(--main-blue); text-align: center;
+
+        .upload-section {
+            background: #ffffff; margin-top: 40px; padding: 30px 15px;
+            border-radius: 15px; border: 2px dashed var(--main-blue);
+            text-align: center;
         }
-        .btn-link {
-            background: var(--main-blue); color: white; padding: 15px 35px;
-            text-decoration: none; border-radius: 8px; font-weight: bold;
-            display: inline-block; transition: 0.3s; margin-top: 15px;
+
+        .btn-upload-now {
+            background: #27ae60; color: white; padding: 14px 25px;
+            text-decoration: none; border-radius: 25px; font-weight: bold;
+            display: inline-block; margin-top: 15px;
         }
-        .btn-link:hover { background: var(--gold-accent); transform: scale(1.05); }
-        footer { background: #1a1a1a; color: #bdc3c7; padding: 40px 20px; text-align: center; margin-top: 50px; }
+
+        footer { background: #1a1a1a; color: white; padding: 25px; text-align: center; margin-top: 40px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>المكتبة الإفتراضية الإلكترونية للشؤون الفنية</h1>
+    <h1>المكتبة الإفتراضية للشؤون الفنية</h1>
     <p>إدارة الطيران المدني - بنغازي</p>
 </header>
 
 <div class="container">
     <div class="intro-card">
-        <p>
-            كم يسرني زملائي المهندسين في ليبيا وأينما كنتم أن أهديكم هذا العمل الذي أخذ مني مجهوداً كبيراً.. مرجعاً مفيداً لكم وللأجيال القادمة.
-            <br><strong>أخوكم في الله: م/ صالحين اكريم</strong>
-        </p>
+        <p>معد العمل: <strong>المهندس صالحين سليمان اكريم الزوي</strong></p>
     </div>
 
-    <h3 class="section-header">📡 هندسة الاتصالات والرادار</h3>
+    <h3 class="section-header">📞  وحدة الاتصالات والشبكات</h3>
     <div class="books-grid">
         <div class="book-card">
-            <span class="book-title">دليل أنظمة الرادار الجوي</span>
-            <a href="library/P1-dB-conversions-2nd.pdf" class="btn-download" download>تحميل</a>
-        </div>
-        <div class="book-card">
-            <span class="book-title">تقنيات اللاسلكي HF/VHF</span>
-            <a href="library/P3-Configuration-of-Park-Air-T6-Radios.pdf" class="btn-download" download>تحميل</a>
+            <span class="book-title">أنظمة اللاسلكي VHF/UHF</span>
+            <a href="library/comm-guide.pdf" class="btn-download" download>تحميل</a>
         </div>
     </div>
 
-    <h3 class="section-header">✈️ الملاحة الجوية (Navigation)</h3>
+    <h3 class="section-header">🛰️ وحدة الرادار</h3>
     <div class="books-grid">
         <div class="book-card">
-            <span class="book-title">أساسيات الملاحة الجوية</span>
-            <a href="library/nav-basics.pdf" class="btn-download" download>تحميل</a>
-        </div>
-        <div class="book-card">
-            <span class="book-title">أنظمة الهبوط الآلي ILS</span>
-            <a href="library/ils-systems.pdf" class="btn-download" download>تحميل</a>
+            <span class="book-title">دليل صيانة الرادار الأرضي</span>
+            <a href="library/radar.pdf" class="btn-download" download>تحميل</a>
         </div>
     </div>
 
-    <div class="upload-box" id="upload">
-        <h3>📤 هل تود إضافة كتاب أو مرجع؟</h3>
-        <p>مساهمتكم العلمية تخدم الجميع.. اضغط على الزر أدناه لإرسال الملف للمراجعة.</p>
-        
-        <a href="#" class="btn-link">إرسال ملف PDF للمراجعة</a>
+    <h3 class="section-header">✈️ وحدة الملاحة الجوية</h3>
+    <div class="books-grid">
+        <div class="book-card">
+            <span class="book-title">أساسيات أنظمة الـ ILS</span>
+            <a href="library/nav.pdf" class="btn-download" download>تحميل</a>
+        </div>
+    </div>
 
-        <p style="margin-top: 15px; font-size: 0.85rem; color: #666;">
-            * سيتم إضافة الكتاب للموقع بعد مراجعته والتأكد من جودته.
-        </p>
+    <h3 class="section-header">⚡ وحدة الكهرباء والإنارة</h3>
+    <div class="books-grid">
+        <div class="book-card">
+            <span class="book-title">منظومات الإنارة الملاحية</span>
+            <a href="library/light.pdf" class="btn-download" download>تحميل</a>
+        </div>
+    </div>
+
+    <div class="upload-section">
+        <h3>📤 هل تود مشاركة مادة علمية؟</h3>
+        <p>ارفع ملفاتك بصيغة PDF ليتم مراجعتها وإضافتها للمكتبة.</p>
+        <a href="https://forms.gle/Tc1vWSLp97fAyi8P9" class="btn-upload-now">
+            اضغط هنا لرفع كتابك الآن
+        </a>
     </div>
 </div>
 
 <footer>
-    <p>إعداد المهندس: <strong>صالحين سليمان اكريم الزوي</strong></p>
-    <p>جميع الحقوق محفوظة &copy; 2026 - بنغازي، ليبيا</p>
+    <p>جميع الحقوق محفوظة للمهندس صالحين الزوي &copy; 2026</p>
 </footer>
 
 </body>
